@@ -28,8 +28,17 @@ class App extends React.Component {
         );
     }
 
+    componentDidMount() {
+        console.log('-- componentDidMount() --');
+    }
+
+    componentDidUpdate() {
+        console.log('-- componentDidUpdate() --');
+    }
+
     /** React says we have to define render!! */
     render() {
+        console.log('-- render() --');
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>;
         }
